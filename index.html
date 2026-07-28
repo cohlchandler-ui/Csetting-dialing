@@ -339,6 +339,31 @@
   }
   .workspace p{line-height:1.7; opacity:0.85; margin:0 0 16px;}
 
+  .process-layout{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:32px;
+    align-items:stretch;
+  }
+  .process-stacked{
+    display:flex;
+    flex-direction:column;
+    border:1px solid var(--line);
+  }
+  .process-stacked .p-step{
+    border-right:none;
+    border-bottom:1px solid var(--line);
+    padding:22px 26px;
+  }
+  .process-stacked .p-step:last-child{border-bottom:none;}
+  .process-photo{
+    height:100%;
+  }
+  .process-photo img{
+    height:100%;
+    object-fit:cover;
+  }
+
   footer{
     border-top:1px solid var(--line);
     padding:30px 0;
@@ -356,6 +381,7 @@
     .model{grid-template-columns:1fr; padding:30px;}
     .contact-box{grid-template-columns:1fr;}
     .workspace{grid-template-columns:1fr;}
+    .process-layout{grid-template-columns:1fr;}
     .receipt{transform:none;}
   }
 </style>
@@ -461,21 +487,26 @@
     <span class="tag">02 — Process</span>
     <h2>Three steps, every call</h2>
   </div>
-  <div class="process">
-    <div class="p-step">
-      <span class="p-num">01</span>
-      <h3>Contact</h3>
-      <p>I reach out to prospects from a provided list or inbound inquiry, working through it methodically and keeping a record of every attempt and outcome.</p>
+  <div class="process-layout">
+    <div class="process process-stacked">
+      <div class="p-step">
+        <span class="p-num">01</span>
+        <h3>Contact</h3>
+        <p>I reach out to prospects from a provided list or inbound inquiry, working through it methodically and keeping a record of every attempt and outcome.</p>
+      </div>
+      <div class="p-step">
+        <span class="p-num">02</span>
+        <h3>Qualify</h3>
+        <p>Each conversation confirms budget, timeline, and fit against the client's criteria before anything gets scheduled — protecting the client's calendar from no-fit calls.</p>
+      </div>
+      <div class="p-step">
+        <span class="p-num">03</span>
+        <h3>Book &amp; nurture</h3>
+        <p>Qualified prospects are booked directly onto the sales calendar. I follow up to confirm and reduce no-shows, so the appointment is still warm when it's time to talk.</p>
+      </div>
     </div>
-    <div class="p-step">
-      <span class="p-num">02</span>
-      <h3>Qualify</h3>
-      <p>Each conversation confirms budget, timeline, and fit against the client's criteria before anything gets scheduled — protecting the client's calendar from no-fit calls.</p>
-    </div>
-    <div class="p-step">
-      <span class="p-num">03</span>
-      <h3>Book &amp; nurture</h3>
-      <p>Qualified prospects are booked directly onto the sales calendar. I follow up to confirm and reduce no-shows, so the appointment is still warm when it's time to talk.</p>
+    <div class="workspace-frame process-photo">
+      <img src="process-photo.jpg" alt="Process photo">
     </div>
   </div>
 </section>
@@ -489,11 +520,16 @@
       <h2>Commission on client acquisition</h2>
       <p>I'm paid on results, not hours. Compensation is a commission tied to successful client acquisitions — when a booked appointment converts into a paying client, that's when I earn.</p>
     </div>
-    <div class="model-figure">
-      <div class="row"><span>Appointments booked</span><span>Per client</span></div>
-      <div class="row"><span>Qualification standard</span><span>Client-defined</span></div>
-      <div class="row"><span>Payment structure</span><span>Commission-based</span></div>
-      <div class="row"><span>Paid on</span><span>Client acquisition</span></div>
+    <div>
+      <div class="workspace-frame" style="margin-bottom:18px; background:var(--card-2); border-color:var(--line);">
+        <img src="commission-photo.jpg" alt="Commission photo">
+      </div>
+      <div class="model-figure">
+        <div class="row"><span>Appointments booked</span><span>Per client</span></div>
+        <div class="row"><span>Qualification standard</span><span>Client-defined</span></div>
+        <div class="row"><span>Payment structure</span><span>Commission-based</span></div>
+        <div class="row"><span>Paid on</span><span>Client acquisition</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -507,11 +543,16 @@
   </div>
   <div class="contact-box">
     <div>
+      <div class="workspace-frame" style="margin-bottom:18px;">
+        <img src="street-car.jpg" alt="Car parked on a street in the evening">
+      </div>
       <p style="line-height:1.7; opacity:0.9;">Currently taking on new coaching businesses and startups that need consistent, qualified appointments booked on their sales calendar. Reach out and tell me about your offer.</p>
     </div>
     <div class="contact-card">
       <span class="label">Email</span>
       <p class="val"><a href="mailto:cohlchandler@gmail.com">cohlchandler@gmail.com</a></p>
+      <span class="label">WhatsApp</span>
+      <p class="val"><a href="https://wa.me/12088691667">+1 (208) 869-1667</a></p>
       <span class="label">Based in</span>
       <p class="val">United States</p>
       <span class="label">Services</span>
