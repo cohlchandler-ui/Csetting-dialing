@@ -364,6 +364,47 @@
     object-fit:cover;
   }
 
+  /* TESTIMONIALS */
+  .stat-banner{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    flex-wrap:wrap;
+    border:1px solid var(--line);
+    background:var(--card);
+    padding:26px 30px;
+    margin-bottom:32px;
+  }
+  .stat-num{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(2rem, 4vw, 2.8rem);
+    color:var(--ink);
+  }
+  .stat-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    opacity:0.65;
+  }
+  .testimonial-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:24px;
+  }
+  .testimonial-frame{
+    border:1px solid var(--line);
+    background:var(--card);
+    padding:10px;
+  }
+  .testimonial-frame img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:2px;
+  }
+
   footer{
     border-top:1px solid var(--line);
     padding:30px 0;
@@ -381,6 +422,7 @@
     .model{grid-template-columns:1fr; padding:30px;}
     .contact-box{grid-template-columns:1fr;}
     .workspace{grid-template-columns:1fr;}
+    .testimonial-grid{grid-template-columns:1fr;}
     .process-layout{grid-template-columns:1fr;}
     .receipt{transform:none;}
   }
@@ -395,6 +437,7 @@
       <a href="#about">About</a>
       <a href="#process">Process</a>
       <a href="#model">How I'm Paid</a>
+      <a href="#testimonials">Results</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -455,6 +498,29 @@
         <li>Startups</li>
         <li>High-ticket consulting</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="testimonials" class="wrap reveal">
+  <div class="section-head">
+    <span class="tag">— Results</span>
+    <h2>Closed deals, straight from the team channel</h2>
+  </div>
+
+  <div class="stat-banner">
+    <span class="stat-num">$88,000</span>
+    <span class="stat-label">Total deal value closed — first two months</span>
+  </div>
+
+  <div class="testimonial-grid">
+    <div class="testimonial-frame workspace-frame">
+      <img src="testimonial-1.png" alt="Closed deal notification screenshot">
+    </div>
+    <div class="testimonial-frame workspace-frame">
+      <img src="testimonial-2.png" alt="Closed deal notification screenshot">
     </div>
   </div>
 </section>
